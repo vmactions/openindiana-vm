@@ -89,7 +89,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@503aba31f7bf0b191dd28cd177f165d39f10f2e4
+      uses: vmactions/openindiana-vm@d6d50dcda6b884888e2291c02351bb978d6e068b
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -120,10 +120,9 @@ jobs:
           fi
           pwd
           ls -lah
-          whoami
+          pwd
           env
-          psrinfo -vp
-          cat /etc/release
+          uname -a
           echo "OK"
 
     - name: Test NAT
@@ -147,10 +146,9 @@ jobs:
           fi
           pwd
           ls -lah
-          whoami
+          pwd
           env
-          psrinfo -vp
-          cat /etc/release
+          uname -a
           echo "OK"
 
 
@@ -222,7 +220,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@503aba31f7bf0b191dd28cd177f165d39f10f2e4
+      uses: vmactions/openindiana-vm@d6d50dcda6b884888e2291c02351bb978d6e068b
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -253,10 +251,9 @@ jobs:
           fi
           pwd
           ls -lah
-          whoami
+          pwd
           env
-          psrinfo -vp
-          cat /etc/release
+          uname -a
           echo "OK"
 
     - name: Test NAT
@@ -280,10 +277,9 @@ jobs:
           fi
           pwd
           ls -lah
-          whoami
+          pwd
           env
-          psrinfo -vp
-          cat /etc/release
+          uname -a
           echo "OK"
 
 
@@ -348,7 +344,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@503aba31f7bf0b191dd28cd177f165d39f10f2e4
+      uses: vmactions/openindiana-vm@d6d50dcda6b884888e2291c02351bb978d6e068b
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -380,10 +376,9 @@ jobs:
           fi
           pwd
           ls -lah
-          whoami
+          pwd
           env
-          psrinfo -vp
-          cat /etc/release
+          uname -a
           echo "OK"
 
     - name: Test NAT
@@ -407,10 +402,9 @@ jobs:
           fi
           pwd
           ls -lah
-          whoami
+          pwd
           env
-          psrinfo -vp
-          cat /etc/release
+          uname -a
           echo "OK"
 
 
@@ -474,7 +468,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@503aba31f7bf0b191dd28cd177f165d39f10f2e4
+      uses: vmactions/openindiana-vm@d6d50dcda6b884888e2291c02351bb978d6e068b
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -499,10 +493,9 @@ jobs:
           fi
           pwd
           ls -lah
-          whoami
+          pwd
           env
-          psrinfo -vp
-          cat /etc/release
+          uname -a
           echo "OK"
     - name: Test NAT
       if: ${{ steps.check.outputs.run == 'true' }}
@@ -526,10 +519,9 @@ jobs:
           fi
           pwd
           ls -lah
-          whoami
+          pwd
           env
-          psrinfo -vp
-          cat /etc/release
+          uname -a
           echo "OK"
 
 
