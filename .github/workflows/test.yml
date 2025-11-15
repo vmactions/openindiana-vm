@@ -89,11 +89,11 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@a5c18b05c470e8836f5ae6e9d1957480e6a5670c
+      uses: vmactions/openindiana-vm@bc9155e00f2113261018dbbea49d916e6adeb4a5
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
-          pkg install curl
+          pkg install socat
         release: ${{ matrix.release }}
         arch: ${{ matrix.arch }}
         nat: |
@@ -220,11 +220,11 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@a5c18b05c470e8836f5ae6e9d1957480e6a5670c
+      uses: vmactions/openindiana-vm@bc9155e00f2113261018dbbea49d916e6adeb4a5
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
-          pkg install curl
+          pkg install socat
         release: ${{ matrix.release }}
         arch: ${{ matrix.arch }}
         nat: |
@@ -344,11 +344,11 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@a5c18b05c470e8836f5ae6e9d1957480e6a5670c
+      uses: vmactions/openindiana-vm@bc9155e00f2113261018dbbea49d916e6adeb4a5
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
-          pkg install curl
+          pkg install socat
         release: ${{ matrix.release }}
         arch: ${{ matrix.arch }}
         nat: |
@@ -468,11 +468,11 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@a5c18b05c470e8836f5ae6e9d1957480e6a5670c
+      uses: vmactions/openindiana-vm@bc9155e00f2113261018dbbea49d916e6adeb4a5
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
-          pkg install curl
+          pkg install socat
         mem: 4096
         release: ${{ matrix.release }}
         arch: ${{ matrix.arch }}
