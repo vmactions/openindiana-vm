@@ -44,7 +44,7 @@ jobs:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
         prepare: |
-          pkg install curl
+          pkg install socat
 
         run: |
           if [ -n "test" ]; then
@@ -109,7 +109,7 @@ The code is shared from the host to the VM via `rsync` by default, you can choos
         usesh: true
         sync: sshfs  # or: nfs
         prepare: |
-          pkg install curl
+          pkg install socat
 
 
 
@@ -139,7 +139,7 @@ When using `rsync` or `scp`,  you can define `copyback: false` to not copy files
         sync: rsync
         copyback: false
         prepare: |
-          pkg install curl
+          pkg install socat
 
 
 
