@@ -11,7 +11,7 @@ All the supported releases are here:
 
 | Release | x86_64  |
 |---------|---------|
-| 202520  |  ✅    |
+| 202510  |  ✅    |
 
 
 
