@@ -1,0 +1,25 @@
+{
+  "name": "vmactions-OpenIndiana",
+  "version": "",
+  "description": "GitHub actions for OpenIndiana",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmactions/openindiana-vm.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "OpenIndiana"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vmactions/openindiana-vm/issues"
+  },
+  "homepage": "https://github.com/vmactions/openindiana-vm",
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/exec": "^1.1.1"
+  }
+}
