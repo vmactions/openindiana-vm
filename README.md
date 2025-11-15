@@ -55,10 +55,9 @@ jobs:
           fi
           pwd
           ls -lah
-          whoami
+          pwd
           env
-          psrinfo -vp
-          cat /etc/release
+          uname -a
           echo "OK"
 
 
