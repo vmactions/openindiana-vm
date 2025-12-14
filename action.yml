@@ -1,6 +1,10 @@
 name: 'OpenIndiana-vm'
 description: 'Run CI in OpenIndiana for GitHub Actions'
 inputs:
+  osname:
+    description: 'The OS name'
+    required: false
+    default: 'OpenIndiana'
   prepare:
     description: 'Install some tools before CI runs'
     required: false
