@@ -37,6 +37,9 @@ jobs:
             arch: ""
           - runs: "ubuntu-24.04-arm"
             arch: "riscv64"
+          - arch: "aarch64"
+          - arch: "riscv64"
+
 
 
     runs-on: ${{ matrix.runs }}
@@ -91,7 +94,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@08ef779fb05b51cdfa6c058df110b9cd419f816e
+      uses: vmactions/openindiana-vm@a44a6ce4e1ef34791d4ed1c32275e2b7cce143ad
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -173,6 +176,9 @@ jobs:
             arch: ""
           - runs: "ubuntu-24.04-arm"
             arch: "riscv64"
+          - arch: "aarch64"
+          - arch: "riscv64"
+
 
 
     runs-on: ${{ matrix.runs }}
@@ -226,7 +232,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@08ef779fb05b51cdfa6c058df110b9cd419f816e
+      uses: vmactions/openindiana-vm@a44a6ce4e1ef34791d4ed1c32275e2b7cce143ad
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -240,6 +246,7 @@ jobs:
           "8443": "443"
           udp:"8081": "80"
         usesh: true
+        debug: true
         sync: nfs
         run: |
           ls -lah /root/work
@@ -309,6 +316,9 @@ jobs:
             arch: ""
           - runs: "ubuntu-24.04-arm"
             arch: "riscv64"
+          - arch: "aarch64"
+          - arch: "riscv64"
+
 
 
     runs-on: ${{ matrix.runs }}
@@ -357,7 +367,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@08ef779fb05b51cdfa6c058df110b9cd419f816e
+      uses: vmactions/openindiana-vm@a44a6ce4e1ef34791d4ed1c32275e2b7cce143ad
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -371,6 +381,7 @@ jobs:
           "8443": "443"
           udp:"8081": "80"
         usesh: true
+        debug: true
         sync: scp
         run: |
           ls -lah /root/work
@@ -426,6 +437,9 @@ jobs:
             arch: ""
           - runs: "ubuntu-24.04-arm"
             arch: "riscv64"
+          - arch: "aarch64"
+          - arch: "riscv64"
+
 
 
 
@@ -472,7 +486,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@08ef779fb05b51cdfa6c058df110b9cd419f816e
+      uses: vmactions/openindiana-vm@a44a6ce4e1ef34791d4ed1c32275e2b7cce143ad
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
