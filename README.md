@@ -41,7 +41,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Test in OpenIndiana
       id: test
-      uses: vmactions/openindiana-vm@v1
+      uses: vmactions/openindiana-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -68,7 +68,7 @@ jobs:
 ```
 
 
-The latest major version is: `v1`, which is the most recommended to use. (You can also use the latest full version: `v1.0.1`)  
+The latest major version is: ``, which is the most recommended to use. (You can also use the latest full version: ``)  
 
 
 If you are migrating from the previous `v0`, please change the `runs-on: ` to `runs-on: ubuntu-latest`
@@ -105,7 +105,7 @@ The code is shared from the host to the VM via `rsync` by default, you can choos
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/openindiana-vm@v1
+      uses: vmactions/openindiana-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -134,7 +134,7 @@ When using `rsync` or `scp`,  you can define `copyback: false` to not copy files
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/openindiana-vm@v1
+      uses: vmactions/openindiana-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -164,7 +164,7 @@ You can add NAT port between the host and the VM.
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/openindiana-vm@v1
+      uses: vmactions/openindiana-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -186,7 +186,7 @@ The default memory of the VM is 6144MB, you can use `mem` option to set the memo
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/openindiana-vm@v1
+      uses: vmactions/openindiana-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -203,7 +203,7 @@ The VM is using all the cpu cores of the host by default, you can use `cpu` opti
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/openindiana-vm@v1
+      uses: vmactions/openindiana-vm@
       with:
         envs: 'MYTOKEN MYTOKEN2'
         usesh: true
@@ -222,7 +222,7 @@ It uses [the OpenIndiana 202510](conf/default.release.conf) by default, you can 
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/openindiana-vm@v1
+      uses: vmactions/openindiana-vm@
       with:
         release: "202510"
 ...
@@ -244,7 +244,7 @@ The vm is using x86_64(AMD64) by default, but you can use `arch` option to chang
     - uses: actions/checkout@v4
     - name: Test
       id: test
-      uses: vmactions/openindiana-vm@v1
+      uses: vmactions/openindiana-vm@
       with:
         release: "202510"
         arch: aarch64
@@ -267,7 +267,7 @@ Support custom shell:
     - uses: actions/checkout@v4
     - name: Start VM
       id: vm
-      uses: vmactions/openindiana-vm@v1
+      uses: vmactions/openindiana-vm@
       with:
         sync: nfs
     - name: Custom shell step 1
@@ -286,7 +286,27 @@ Support custom shell:
 ```
 
 
-## 8. Debug locally
+## 8. Synchronize VM time
+
+If the time in VM is not correct, You can use `sync-time` option to synchronize the VM time with NTP:
+
+```
+...
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test
+      id: test
+      uses: vmactions/openindiana-vm@
+      with:
+        sync-time: true
+...
+```
+
+
+
+
+
+## 9. Debug locally
 
 You can use [AnyVM](https://github.com/anyvm-org/anyvm) to run the OpenIndiana VM locally for debugging. It's the same environment as in the GitHub Actions.
 
