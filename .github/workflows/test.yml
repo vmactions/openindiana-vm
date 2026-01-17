@@ -51,7 +51,7 @@ jobs:
       DEBUG: 1
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Check arch
       id: check
       run: |
@@ -94,7 +94,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@45c94ea13dd7d504cc6fe1de878cfc4b2fbebbb6
+      uses: vmactions/openindiana-vm@979e807c1d152ec024462b31d6dc4e0bdd584b7b
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -191,7 +191,7 @@ jobs:
       DEBUG: 1
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Check arch
       id: check
       run: |
@@ -233,7 +233,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@45c94ea13dd7d504cc6fe1de878cfc4b2fbebbb6
+      uses: vmactions/openindiana-vm@979e807c1d152ec024462b31d6dc4e0bdd584b7b
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -331,7 +331,7 @@ jobs:
       DEBUG: 1
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Check arch
       id: check
       run: |
@@ -368,7 +368,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@45c94ea13dd7d504cc6fe1de878cfc4b2fbebbb6
+      uses: vmactions/openindiana-vm@979e807c1d152ec024462b31d6dc4e0bdd584b7b
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -454,7 +454,7 @@ jobs:
       SEC_VBOX : ${{ vars.SEC_VBOX }}
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Check arch
       id: check
       run: |
@@ -489,7 +489,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@45c94ea13dd7d504cc6fe1de878cfc4b2fbebbb6
+      uses: vmactions/openindiana-vm@979e807c1d152ec024462b31d6dc4e0bdd584b7b
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
