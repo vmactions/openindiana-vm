@@ -94,7 +94,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@c8df3d915d9b62da430058449fcefc4b8e6bde49
+      uses: vmactions/openindiana-vm@d8e0274eef764c12b384a188f157f43660641cd3
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -233,7 +233,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@c8df3d915d9b62da430058449fcefc4b8e6bde49
+      uses: vmactions/openindiana-vm@d8e0274eef764c12b384a188f157f43660641cd3
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -368,7 +368,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@c8df3d915d9b62da430058449fcefc4b8e6bde49
+      uses: vmactions/openindiana-vm@d8e0274eef764c12b384a188f157f43660641cd3
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -490,7 +490,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@c8df3d915d9b62da430058449fcefc4b8e6bde49
+      uses: vmactions/openindiana-vm@d8e0274eef764c12b384a188f157f43660641cd3
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
