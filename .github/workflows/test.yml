@@ -29,7 +29,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "202510", ""]
+        release: [ "202510", "202510-build", ""]
         arch: [ "aarch64", "", "riscv64"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         exclude:
@@ -93,7 +93,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@6a39ce2580f4f2b5ebbcb4656ee020ea3d8eadba
+      uses: vmactions/openindiana-vm@5004012e97e6f96886bacad09aff54def0ceb7b9
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -168,7 +168,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "202510", ""]
+        release: [ "202510", "202510-build", ""]
         arch: [ "aarch64", "", "riscv64"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         exclude:
@@ -231,7 +231,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@6a39ce2580f4f2b5ebbcb4656ee020ea3d8eadba
+      uses: vmactions/openindiana-vm@5004012e97e6f96886bacad09aff54def0ceb7b9
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -307,7 +307,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "202510", ""]
+        release: [ "202510", "202510-build", ""]
         arch: [ "aarch64", "", "riscv64"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         exclude:
@@ -365,7 +365,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@6a39ce2580f4f2b5ebbcb4656ee020ea3d8eadba
+      uses: vmactions/openindiana-vm@5004012e97e6f96886bacad09aff54def0ceb7b9
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -429,7 +429,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "202510", ""]
+        release: [ "202510", "202510-build", ""]
         arch: [ "aarch64", "", "riscv64"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         disableCache: [ "", "true"]
@@ -486,7 +486,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@6a39ce2580f4f2b5ebbcb4656ee020ea3d8eadba
+      uses: vmactions/openindiana-vm@5004012e97e6f96886bacad09aff54def0ceb7b9
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -559,13 +559,13 @@ jobs:
     - name: Test in OpenIndiana
       id: testerr
       continue-on-error: true 
-      uses: vmactions/openindiana-vm@6a39ce2580f4f2b5ebbcb4656ee020ea3d8eadba
+      uses: vmactions/openindiana-vm@5004012e97e6f96886bacad09aff54def0ceb7b9
       with:
         usesh: true
         debug: true
         run: |
           echo "this is an error"
-          exit 1
+          false
     - name: Verify that the previous step failed
       if: steps.testerr.outcome != 'failure'
       run: |
@@ -587,13 +587,13 @@ jobs:
     - name: Test in OpenIndiana
       id: testpass
       continue-on-error: true 
-      uses: vmactions/openindiana-vm@6a39ce2580f4f2b5ebbcb4656ee020ea3d8eadba
+      uses: vmactions/openindiana-vm@5004012e97e6f96886bacad09aff54def0ceb7b9
       with:
         usesh: true
         debug: true
         run: |
           echo "this is a normal command"
-          exit 0
+          true
     - name: Verify that the previous step succeeded
       if: steps.testpass.outcome != 'success'
       run: |
