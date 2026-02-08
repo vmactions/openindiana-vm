@@ -11,10 +11,10 @@ All the supported releases are here:
 
 
 
-| Release | x86_64  |
-|---------|---------|
-| 202510  |  ✅    |
-
+| Release | x86_64  |  Comments |
+|---------|---------|-----------|
+| 202510  |  ✅    | fresh     |
+| 202510-build  |  ✅    | build-essential|
 
 
 
