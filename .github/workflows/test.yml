@@ -50,7 +50,6 @@ jobs:
       DEBUG: 1
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v6
     - name: Check arch
       id: check
       run: |
@@ -189,7 +188,6 @@ jobs:
       DEBUG: 1
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v6
     - name: Check arch
       id: check
       run: |
@@ -328,7 +326,6 @@ jobs:
       DEBUG: 1
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v6
     - name: Check arch
       id: check
       run: |
@@ -451,7 +448,6 @@ jobs:
       MYTOKEN2: "value2"
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v6
     - name: Check arch
       id: check
       run: |
@@ -555,7 +551,6 @@ jobs:
     runs-on: ubuntu-24.04
     name: test default error OpenIndiana
     steps:
-    - uses: actions/checkout@v6
     - name: Test in OpenIndiana
       id: testerr
       continue-on-error: true 
@@ -583,7 +578,6 @@ jobs:
     runs-on: ubuntu-24.04
     name: test default success OpenIndiana
     steps:
-    - uses: actions/checkout@v6
     - name: Test in OpenIndiana
       id: testpass
       continue-on-error: true 
