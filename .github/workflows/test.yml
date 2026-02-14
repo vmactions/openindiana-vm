@@ -93,7 +93,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@7ebe3a807589fa07f14b365e407adfa438ef1296
+      uses: vmactions/openindiana-vm@4e22b052bda91b3d2771bccdff731dc388edf278
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -231,7 +231,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@7ebe3a807589fa07f14b365e407adfa438ef1296
+      uses: vmactions/openindiana-vm@4e22b052bda91b3d2771bccdff731dc388edf278
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -365,7 +365,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@7ebe3a807589fa07f14b365e407adfa438ef1296
+      uses: vmactions/openindiana-vm@4e22b052bda91b3d2771bccdff731dc388edf278
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -486,7 +486,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@7ebe3a807589fa07f14b365e407adfa438ef1296
+      uses: vmactions/openindiana-vm@4e22b052bda91b3d2771bccdff731dc388edf278
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -559,7 +559,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testerr
       continue-on-error: true 
-      uses: vmactions/openindiana-vm@7ebe3a807589fa07f14b365e407adfa438ef1296
+      uses: vmactions/openindiana-vm@4e22b052bda91b3d2771bccdff731dc388edf278
       with:
         usesh: true
         debug: true
@@ -587,7 +587,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testpass
       continue-on-error: true 
-      uses: vmactions/openindiana-vm@7ebe3a807589fa07f14b365e407adfa438ef1296
+      uses: vmactions/openindiana-vm@4e22b052bda91b3d2771bccdff731dc388edf278
       with:
         usesh: true
         debug: true
