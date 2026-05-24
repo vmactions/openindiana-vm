@@ -93,7 +93,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@93cec5440e97313f5a4c4e5e21447ac5adf70926
+      uses: vmactions/openindiana-vm@4283690c6bc52f90cdaee0b6ebe94710a0e3f9fb
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -108,6 +108,7 @@ jobs:
           udp:"8081": "80"
         usesh: true
         debug: true
+        debug-on-error: ${{ vars.DEBUG_ON_ERROR }}
         sync: sshfs
         run: |
           set -e
@@ -225,7 +226,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@93cec5440e97313f5a4c4e5e21447ac5adf70926
+      uses: vmactions/openindiana-vm@4283690c6bc52f90cdaee0b6ebe94710a0e3f9fb
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -240,6 +241,7 @@ jobs:
           udp:"8081": "80"
         usesh: true
         debug: true
+        debug-on-error: ${{ vars.DEBUG_ON_ERROR }}
         sync: nfs
         run: |
           ls -lah $HOME/work
@@ -358,7 +360,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@93cec5440e97313f5a4c4e5e21447ac5adf70926
+      uses: vmactions/openindiana-vm@4283690c6bc52f90cdaee0b6ebe94710a0e3f9fb
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -373,6 +375,7 @@ jobs:
           udp:"8081": "80"
         usesh: true
         debug: true
+        debug-on-error: ${{ vars.DEBUG_ON_ERROR }}
         sync: scp
         run: |
           ls -lah $HOME/work
@@ -479,7 +482,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@93cec5440e97313f5a4c4e5e21447ac5adf70926
+      uses: vmactions/openindiana-vm@4283690c6bc52f90cdaee0b6ebe94710a0e3f9fb
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -494,6 +497,7 @@ jobs:
           udp:"8081": "80"
         usesh: true
         debug: true
+        debug-on-error: ${{ vars.DEBUG_ON_ERROR }}
         disable-cache: ${{ matrix.disableCache }}
         run: |
           env
@@ -605,7 +609,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@93cec5440e97313f5a4c4e5e21447ac5adf70926
+      uses: vmactions/openindiana-vm@4283690c6bc52f90cdaee0b6ebe94710a0e3f9fb
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -620,6 +624,7 @@ jobs:
           udp:"8081": "80"
         usesh: true
         debug: true
+        debug-on-error: ${{ vars.DEBUG_ON_ERROR }}
         custom-shell-name: vmsh
         run: |
           env
@@ -679,7 +684,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testerr
       continue-on-error: true 
-      uses: vmactions/openindiana-vm@93cec5440e97313f5a4c4e5e21447ac5adf70926
+      uses: vmactions/openindiana-vm@4283690c6bc52f90cdaee0b6ebe94710a0e3f9fb
       with:
         usesh: true
         debug: true
@@ -707,7 +712,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testpass
       continue-on-error: true 
-      uses: vmactions/openindiana-vm@93cec5440e97313f5a4c4e5e21447ac5adf70926
+      uses: vmactions/openindiana-vm@4283690c6bc52f90cdaee0b6ebe94710a0e3f9fb
       with:
         usesh: true
         debug: true
