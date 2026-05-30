@@ -20,6 +20,8 @@ All the supported releases are here:
 
 | Release | x86_64  |  Comments |
 |---------|---------|-----------|
+| 202604  |  ✅    | fresh     |
+| 202604-build  |  ✅    | build-essential|
 | 202510  |  ✅    | fresh     |
 | 202510-build  |  ✅    | build-essential|
 
@@ -197,7 +199,7 @@ The VM is using all the cpu cores of the host by default, you can use `cpu` opti
 
 ## 5. Select release
 
-It uses [the OpenIndiana 202510](conf/default.release.conf) by default, you can use `release` option to use another version of OpenIndiana:
+It uses [the OpenIndiana 202604](conf/default.release.conf) by default, you can use `release` option to use another version of OpenIndiana:
 
 ```yaml
 ...
