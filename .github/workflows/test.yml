@@ -29,7 +29,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "202510", "202510-build", ""]
+        release: [ "202510", "202510-build", "202604", "202604-build", ""]
         arch: [ "aarch64", "", "riscv64"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         exclude:
@@ -93,7 +93,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@a3a29d6c31f7f7526408f83c8b4a91c9e130fa61
+      uses: vmactions/openindiana-vm@d26279e4148f223bc678086c8bbb6f3835de38ba
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -169,7 +169,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "202510", "202510-build", ""]
+        release: [ "202510", "202510-build", "202604", "202604-build", ""]
         arch: [ "aarch64", "", "riscv64"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         exclude:
@@ -226,7 +226,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@a3a29d6c31f7f7526408f83c8b4a91c9e130fa61
+      uses: vmactions/openindiana-vm@d26279e4148f223bc678086c8bbb6f3835de38ba
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -302,7 +302,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "202510", "202510-build", ""]
+        release: [ "202510", "202510-build", "202604", "202604-build", ""]
         arch: [ "aarch64", "", "riscv64"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         exclude:
@@ -360,7 +360,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@a3a29d6c31f7f7526408f83c8b4a91c9e130fa61
+      uses: vmactions/openindiana-vm@d26279e4148f223bc678086c8bbb6f3835de38ba
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -425,7 +425,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "202510", "202510-build", ""]
+        release: [ "202510", "202510-build", "202604", "202604-build", ""]
         arch: [ "aarch64", "", "riscv64"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         disableCache: [ "", "true"]
@@ -482,7 +482,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@a3a29d6c31f7f7526408f83c8b4a91c9e130fa61
+      uses: vmactions/openindiana-vm@d26279e4148f223bc678086c8bbb6f3835de38ba
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -553,7 +553,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release: [ "202510", "202510-build", ""]
+        release: [ "202510", "202510-build", "202604", "202604-build", ""]
         arch: [ "aarch64", "", "riscv64"]
         runs: [ "ubuntu-24.04", "ubuntu-24.04-arm"]
         exclude:
@@ -609,7 +609,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@a3a29d6c31f7f7526408f83c8b4a91c9e130fa61
+      uses: vmactions/openindiana-vm@d26279e4148f223bc678086c8bbb6f3835de38ba
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -684,7 +684,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testerr
       continue-on-error: true 
-      uses: vmactions/openindiana-vm@a3a29d6c31f7f7526408f83c8b4a91c9e130fa61
+      uses: vmactions/openindiana-vm@d26279e4148f223bc678086c8bbb6f3835de38ba
       with:
         usesh: true
         debug: true
@@ -712,7 +712,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testpass
       continue-on-error: true 
-      uses: vmactions/openindiana-vm@a3a29d6c31f7f7526408f83c8b4a91c9e130fa61
+      uses: vmactions/openindiana-vm@d26279e4148f223bc678086c8bbb6f3835de38ba
       with:
         usesh: true
         debug: true
