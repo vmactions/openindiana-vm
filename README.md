@@ -207,7 +207,7 @@ It uses [the OpenIndiana 202604](conf/default.release.conf) by default, you can 
       id: test
       uses: vmactions/openindiana-vm@v1
       with:
-        release: "202510"
+        release: "202604-build"
 ...
 ```
 
