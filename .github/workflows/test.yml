@@ -93,7 +93,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@f7f973f22890d89e8d0da62d3405f2168bdb51da
+      uses: vmactions/openindiana-vm@b28960adf5b97a7a67eb02bbd5ddbf341150c06a
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -226,7 +226,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@f7f973f22890d89e8d0da62d3405f2168bdb51da
+      uses: vmactions/openindiana-vm@b28960adf5b97a7a67eb02bbd5ddbf341150c06a
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -360,7 +360,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@f7f973f22890d89e8d0da62d3405f2168bdb51da
+      uses: vmactions/openindiana-vm@b28960adf5b97a7a67eb02bbd5ddbf341150c06a
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -482,7 +482,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@f7f973f22890d89e8d0da62d3405f2168bdb51da
+      uses: vmactions/openindiana-vm@b28960adf5b97a7a67eb02bbd5ddbf341150c06a
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -609,7 +609,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ steps.check.outputs.run == 'true' }}
       id: test
-      uses: vmactions/openindiana-vm@f7f973f22890d89e8d0da62d3405f2168bdb51da
+      uses: vmactions/openindiana-vm@b28960adf5b97a7a67eb02bbd5ddbf341150c06a
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -684,7 +684,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testerr
       continue-on-error: true 
-      uses: vmactions/openindiana-vm@f7f973f22890d89e8d0da62d3405f2168bdb51da
+      uses: vmactions/openindiana-vm@b28960adf5b97a7a67eb02bbd5ddbf341150c06a
       with:
         usesh: true
         debug: true
@@ -712,7 +712,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testpass
       continue-on-error: true 
-      uses: vmactions/openindiana-vm@f7f973f22890d89e8d0da62d3405f2168bdb51da
+      uses: vmactions/openindiana-vm@b28960adf5b97a7a67eb02bbd5ddbf341150c06a
       with:
         usesh: true
         debug: true
