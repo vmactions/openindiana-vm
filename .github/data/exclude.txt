@@ -1,3 +1,1 @@
-          - arch: "aarch64"
-          - arch: "riscv64"
-
+          # Manual matrix excludes only; combos with no conf are auto-excluded.
