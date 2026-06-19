@@ -47,6 +47,66 @@ jobs:
           - arch: "aarch64"
           - arch: "riscv64"
 
+          - release: "202510"
+            arch: aarch64
+          - release: "202510"
+            arch: riscv64
+          - release: "202510"
+            arch: powerpc64
+          - release: "202510"
+            arch: sparc64
+          - release: "202510"
+            arch: ppc64le
+          - release: "202510"
+            arch: s390x
+          - release: "202510-build"
+            arch: aarch64
+          - release: "202510-build"
+            arch: riscv64
+          - release: "202510-build"
+            arch: powerpc64
+          - release: "202510-build"
+            arch: sparc64
+          - release: "202510-build"
+            arch: ppc64le
+          - release: "202510-build"
+            arch: s390x
+          - release: "202604"
+            arch: aarch64
+          - release: "202604"
+            arch: riscv64
+          - release: "202604"
+            arch: powerpc64
+          - release: "202604"
+            arch: sparc64
+          - release: "202604"
+            arch: ppc64le
+          - release: "202604"
+            arch: s390x
+          - release: "202604-build"
+            arch: aarch64
+          - release: "202604-build"
+            arch: riscv64
+          - release: "202604-build"
+            arch: powerpc64
+          - release: "202604-build"
+            arch: sparc64
+          - release: "202604-build"
+            arch: ppc64le
+          - release: "202604-build"
+            arch: s390x
+          - release: ""
+            arch: aarch64
+          - release: ""
+            arch: riscv64
+          - release: ""
+            arch: powerpc64
+          - release: ""
+            arch: sparc64
+          - release: ""
+            arch: ppc64le
+          - release: ""
+            arch: s390x
 
 
     runs-on: ${{ matrix.runs }}
@@ -59,7 +119,7 @@ jobs:
     steps:
     - uses: actions/checkout@v6
 #    - name: Creating Web console
-#      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
+#      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
 #      uses: vmactions/cf-tunnel@v0
 #      id: tunnel
 #      with:
@@ -67,9 +127,9 @@ jobs:
 #        port: 8000
 
     - name: Test in OpenIndiana
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
       id: test
-      uses: vmactions/openindiana-vm@a6e4b64312758195a3a2a705df0a3db9acf28922
+      uses: vmactions/openindiana-vm@a4493de15db9bc083288fa2b5628b2bc27b8ac91
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -109,7 +169,7 @@ jobs:
           echo "OK"
 
     - name: Test NAT
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
       env:
         VM_USER: ""
       run: |
@@ -118,7 +178,7 @@ jobs:
         [ "$TEST_ENV" = "abc" ]
         ssh -v -p 20022 ${VM_USER:-root}@localhost  "uname -a;whoami;pwd"
     - name: Test custom shell
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
       shell: openindiana {0}
       run: |
         pwd
@@ -163,6 +223,66 @@ jobs:
           - arch: "aarch64"
           - arch: "riscv64"
 
+          - release: "202510"
+            arch: aarch64
+          - release: "202510"
+            arch: riscv64
+          - release: "202510"
+            arch: powerpc64
+          - release: "202510"
+            arch: sparc64
+          - release: "202510"
+            arch: ppc64le
+          - release: "202510"
+            arch: s390x
+          - release: "202510-build"
+            arch: aarch64
+          - release: "202510-build"
+            arch: riscv64
+          - release: "202510-build"
+            arch: powerpc64
+          - release: "202510-build"
+            arch: sparc64
+          - release: "202510-build"
+            arch: ppc64le
+          - release: "202510-build"
+            arch: s390x
+          - release: "202604"
+            arch: aarch64
+          - release: "202604"
+            arch: riscv64
+          - release: "202604"
+            arch: powerpc64
+          - release: "202604"
+            arch: sparc64
+          - release: "202604"
+            arch: ppc64le
+          - release: "202604"
+            arch: s390x
+          - release: "202604-build"
+            arch: aarch64
+          - release: "202604-build"
+            arch: riscv64
+          - release: "202604-build"
+            arch: powerpc64
+          - release: "202604-build"
+            arch: sparc64
+          - release: "202604-build"
+            arch: ppc64le
+          - release: "202604-build"
+            arch: s390x
+          - release: ""
+            arch: aarch64
+          - release: ""
+            arch: riscv64
+          - release: ""
+            arch: powerpc64
+          - release: ""
+            arch: sparc64
+          - release: ""
+            arch: ppc64le
+          - release: ""
+            arch: s390x
 
 
     runs-on: ${{ matrix.runs }}
@@ -175,9 +295,9 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - name: Test in OpenIndiana
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'nfs') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'nfs') }}
       id: test
-      uses: vmactions/openindiana-vm@a6e4b64312758195a3a2a705df0a3db9acf28922
+      uses: vmactions/openindiana-vm@a4493de15db9bc083288fa2b5628b2bc27b8ac91
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -217,7 +337,7 @@ jobs:
           echo "OK"
 
     - name: Test NAT
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'nfs') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'nfs') }}
       env:
         VM_USER: ""
       run: |
@@ -229,7 +349,7 @@ jobs:
         [ "$TEST_ENV" = "abc" ]
         ssh -v -p 20022 ${VM_USER:-root}@localhost "uname -a;whoami;pwd"
     - name: Test custom shell
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'nfs') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'nfs') }}
       shell: openindiana {0}
       run: |
         pwd
@@ -272,6 +392,66 @@ jobs:
           - arch: "aarch64"
           - arch: "riscv64"
 
+          - release: "202510"
+            arch: aarch64
+          - release: "202510"
+            arch: riscv64
+          - release: "202510"
+            arch: powerpc64
+          - release: "202510"
+            arch: sparc64
+          - release: "202510"
+            arch: ppc64le
+          - release: "202510"
+            arch: s390x
+          - release: "202510-build"
+            arch: aarch64
+          - release: "202510-build"
+            arch: riscv64
+          - release: "202510-build"
+            arch: powerpc64
+          - release: "202510-build"
+            arch: sparc64
+          - release: "202510-build"
+            arch: ppc64le
+          - release: "202510-build"
+            arch: s390x
+          - release: "202604"
+            arch: aarch64
+          - release: "202604"
+            arch: riscv64
+          - release: "202604"
+            arch: powerpc64
+          - release: "202604"
+            arch: sparc64
+          - release: "202604"
+            arch: ppc64le
+          - release: "202604"
+            arch: s390x
+          - release: "202604-build"
+            arch: aarch64
+          - release: "202604-build"
+            arch: riscv64
+          - release: "202604-build"
+            arch: powerpc64
+          - release: "202604-build"
+            arch: sparc64
+          - release: "202604-build"
+            arch: ppc64le
+          - release: "202604-build"
+            arch: s390x
+          - release: ""
+            arch: aarch64
+          - release: ""
+            arch: riscv64
+          - release: ""
+            arch: powerpc64
+          - release: ""
+            arch: sparc64
+          - release: ""
+            arch: ppc64le
+          - release: ""
+            arch: s390x
 
 
     runs-on: ${{ matrix.runs }}
@@ -284,16 +464,16 @@ jobs:
     steps:
     - uses: actions/checkout@v6
 #    - name: Creating Web console
-#      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
+#      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
 #      uses: vmactions/cf-tunnel@v0
 #      id: tunnel
 #      with:
 #        protocol: http
 #        port: 8000
     - name: Test in OpenIndiana
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
       id: test
-      uses: vmactions/openindiana-vm@a6e4b64312758195a3a2a705df0a3db9acf28922
+      uses: vmactions/openindiana-vm@a4493de15db9bc083288fa2b5628b2bc27b8ac91
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -335,7 +515,7 @@ jobs:
           echo "OK"
 
     - name: Test files
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
       env:
         VM_USER: ""
       run: |
@@ -375,6 +555,66 @@ jobs:
           - arch: "aarch64"
           - arch: "riscv64"
 
+          - release: "202510"
+            arch: aarch64
+          - release: "202510"
+            arch: riscv64
+          - release: "202510"
+            arch: powerpc64
+          - release: "202510"
+            arch: sparc64
+          - release: "202510"
+            arch: ppc64le
+          - release: "202510"
+            arch: s390x
+          - release: "202510-build"
+            arch: aarch64
+          - release: "202510-build"
+            arch: riscv64
+          - release: "202510-build"
+            arch: powerpc64
+          - release: "202510-build"
+            arch: sparc64
+          - release: "202510-build"
+            arch: ppc64le
+          - release: "202510-build"
+            arch: s390x
+          - release: "202604"
+            arch: aarch64
+          - release: "202604"
+            arch: riscv64
+          - release: "202604"
+            arch: powerpc64
+          - release: "202604"
+            arch: sparc64
+          - release: "202604"
+            arch: ppc64le
+          - release: "202604"
+            arch: s390x
+          - release: "202604-build"
+            arch: aarch64
+          - release: "202604-build"
+            arch: riscv64
+          - release: "202604-build"
+            arch: powerpc64
+          - release: "202604-build"
+            arch: sparc64
+          - release: "202604-build"
+            arch: ppc64le
+          - release: "202604-build"
+            arch: s390x
+          - release: ""
+            arch: aarch64
+          - release: ""
+            arch: riscv64
+          - release: ""
+            arch: powerpc64
+          - release: ""
+            arch: sparc64
+          - release: ""
+            arch: ppc64le
+          - release: ""
+            arch: s390x
 
 
 
@@ -387,9 +627,9 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - name: Test in OpenIndiana
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@a6e4b64312758195a3a2a705df0a3db9acf28922
+      uses: vmactions/openindiana-vm@a4493de15db9bc083288fa2b5628b2bc27b8ac91
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -422,7 +662,7 @@ jobs:
           uname -a
           echo "OK"
     - name: Test NAT
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       env:
         VM_USER: ""
       run: |
@@ -432,7 +672,7 @@ jobs:
         ssh -v  -p 20022 ${VM_USER:-root}@localhost  "uname -a;whoami;pwd"
 
     - name: Test custom shell
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       shell: openindiana {0}
       run: |
         pwd
@@ -478,6 +718,66 @@ jobs:
           - arch: "aarch64"
           - arch: "riscv64"
 
+          - release: "202510"
+            arch: aarch64
+          - release: "202510"
+            arch: riscv64
+          - release: "202510"
+            arch: powerpc64
+          - release: "202510"
+            arch: sparc64
+          - release: "202510"
+            arch: ppc64le
+          - release: "202510"
+            arch: s390x
+          - release: "202510-build"
+            arch: aarch64
+          - release: "202510-build"
+            arch: riscv64
+          - release: "202510-build"
+            arch: powerpc64
+          - release: "202510-build"
+            arch: sparc64
+          - release: "202510-build"
+            arch: ppc64le
+          - release: "202510-build"
+            arch: s390x
+          - release: "202604"
+            arch: aarch64
+          - release: "202604"
+            arch: riscv64
+          - release: "202604"
+            arch: powerpc64
+          - release: "202604"
+            arch: sparc64
+          - release: "202604"
+            arch: ppc64le
+          - release: "202604"
+            arch: s390x
+          - release: "202604-build"
+            arch: aarch64
+          - release: "202604-build"
+            arch: riscv64
+          - release: "202604-build"
+            arch: powerpc64
+          - release: "202604-build"
+            arch: sparc64
+          - release: "202604-build"
+            arch: ppc64le
+          - release: "202604-build"
+            arch: s390x
+          - release: ""
+            arch: aarch64
+          - release: ""
+            arch: riscv64
+          - release: ""
+            arch: powerpc64
+          - release: ""
+            arch: sparc64
+          - release: ""
+            arch: ppc64le
+          - release: ""
+            arch: s390x
 
 
 
@@ -490,9 +790,9 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - name: Test in OpenIndiana
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@a6e4b64312758195a3a2a705df0a3db9acf28922
+      uses: vmactions/openindiana-vm@a4493de15db9bc083288fa2b5628b2bc27b8ac91
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -525,7 +825,7 @@ jobs:
           uname -a
           echo "OK"
     - name: Test NAT
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       env:
         VM_USER: ""
       run: |
@@ -535,7 +835,7 @@ jobs:
         ssh -v  -p 20022 ${VM_USER:-root}@localhost  "uname -a;whoami;pwd"
 
     - name: Test custom shell
-      if: ${{ contains(fromJSON('')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
+      if: ${{ contains(fromJSON('{"x86_64":[],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       shell: vmsh {0}
       run: |
         pwd
@@ -567,7 +867,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testerr
       continue-on-error: true
-      uses: vmactions/openindiana-vm@a6e4b64312758195a3a2a705df0a3db9acf28922
+      uses: vmactions/openindiana-vm@a4493de15db9bc083288fa2b5628b2bc27b8ac91
       with:
         usesh: true
         debug: true
@@ -595,7 +895,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testpass
       continue-on-error: true
-      uses: vmactions/openindiana-vm@a6e4b64312758195a3a2a705df0a3db9acf28922
+      uses: vmactions/openindiana-vm@a4493de15db9bc083288fa2b5628b2bc27b8ac91
       with:
         usesh: true
         debug: true
