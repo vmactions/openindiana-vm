@@ -10,6 +10,8 @@
             arch: ppc64le
           - release: "202510"
             arch: s390x
+          - release: "202510"
+            arch: i386
           - release: "202510-build"
             arch: aarch64
           - release: "202510-build"
@@ -22,6 +24,8 @@
             arch: ppc64le
           - release: "202510-build"
             arch: s390x
+          - release: "202510-build"
+            arch: i386
           - release: "202604"
             arch: aarch64
           - release: "202604"
@@ -34,6 +38,8 @@
             arch: ppc64le
           - release: "202604"
             arch: s390x
+          - release: "202604"
+            arch: i386
           - release: "202604-build"
             arch: aarch64
           - release: "202604-build"
@@ -46,6 +52,8 @@
             arch: ppc64le
           - release: "202604-build"
             arch: s390x
+          - release: "202604-build"
+            arch: i386
           - release: ""
             arch: aarch64
           - release: ""
@@ -58,3 +66,5 @@
             arch: ppc64le
           - release: ""
             arch: s390x
+          - release: ""
+            arch: i386
