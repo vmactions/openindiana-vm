@@ -129,7 +129,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
       id: test
-      uses: vmactions/openindiana-vm@e9384ac4f48dc6017467e95a23fc26fb1e2859c9
+      uses: vmactions/openindiana-vm@747d2b2c79a471a75b55e8f5edaa0024fad9adb2
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -318,7 +318,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'nfs') }}
       id: test
-      uses: vmactions/openindiana-vm@e9384ac4f48dc6017467e95a23fc26fb1e2859c9
+      uses: vmactions/openindiana-vm@747d2b2c79a471a75b55e8f5edaa0024fad9adb2
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -515,7 +515,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
       id: test
-      uses: vmactions/openindiana-vm@e9384ac4f48dc6017467e95a23fc26fb1e2859c9
+      uses: vmactions/openindiana-vm@747d2b2c79a471a75b55e8f5edaa0024fad9adb2
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -711,7 +711,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@e9384ac4f48dc6017467e95a23fc26fb1e2859c9
+      uses: vmactions/openindiana-vm@747d2b2c79a471a75b55e8f5edaa0024fad9adb2
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -895,7 +895,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@e9384ac4f48dc6017467e95a23fc26fb1e2859c9
+      uses: vmactions/openindiana-vm@747d2b2c79a471a75b55e8f5edaa0024fad9adb2
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -1027,7 +1027,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')['x86_64'], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@e9384ac4f48dc6017467e95a23fc26fb1e2859c9
+      uses: vmactions/openindiana-vm@747d2b2c79a471a75b55e8f5edaa0024fad9adb2
       with:
         mem: 4096
         usesh: true
@@ -1094,7 +1094,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[]}')['x86_64'], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@e9384ac4f48dc6017467e95a23fc26fb1e2859c9
+      uses: vmactions/openindiana-vm@747d2b2c79a471a75b55e8f5edaa0024fad9adb2
       with:
         mem: 4096
         usesh: true
@@ -1162,7 +1162,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testerr
       continue-on-error: true
-      uses: vmactions/openindiana-vm@e9384ac4f48dc6017467e95a23fc26fb1e2859c9
+      uses: vmactions/openindiana-vm@747d2b2c79a471a75b55e8f5edaa0024fad9adb2
       with:
         usesh: true
         debug: true
@@ -1190,7 +1190,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testpass
       continue-on-error: true
-      uses: vmactions/openindiana-vm@e9384ac4f48dc6017467e95a23fc26fb1e2859c9
+      uses: vmactions/openindiana-vm@747d2b2c79a471a75b55e8f5edaa0024fad9adb2
       with:
         usesh: true
         debug: true
