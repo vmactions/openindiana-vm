@@ -36,14 +36,18 @@ All the supported releases are here:
 
 
 
-| Release | x86_64  |  Comments |
-|---------|---------|-----------|
-| 202604  |  ✅ (rsync,scp,sshfs,nfs)    | fresh     |
-| 202604-build  |  ✅ (rsync,scp,sshfs,nfs)    | build-essential|
-| 202510  |  ✅ (rsync,scp,sshfs,nfs)    | fresh     |
-| 202510-build  |  ✅ (rsync,scp,sshfs,nfs)    | build-essential|
+| Release | Comments | x86_64 |
+|---------|---------|---------|
+| 202604-build | build-essential | ✅ (rsync,scp,sshfs,nfs) |
+| 202604 | fresh | ✅ (rsync,scp,sshfs,nfs) |
+| 202510-build | build-essential | ✅ (rsync,scp,sshfs,nfs) |
+| 202510 | fresh | ✅ (rsync,scp,sshfs,nfs) |
 
-
+<!-- extra-column: Comments -->
+<!-- extra-value: 202604 fresh -->
+<!-- extra-value: 202604-build build-essential -->
+<!-- extra-value: 202510 fresh -->
+<!-- extra-value: 202510-build build-essential -->
 
 
 
@@ -95,7 +99,7 @@ jobs:
 ```
 
 
-The latest major version is: `v1`, which is the most recommended to use. (You can also use the latest full version: `v1.1.4`)  
+The latest major version is: `v1`, which is the most recommended to use. (You can also use the latest full version: `v1.1.5`)  
 
 
 If you are migrating from the previous `v0`, please change the `runs-on: ` to `runs-on: ubuntu-latest`
