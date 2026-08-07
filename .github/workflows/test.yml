@@ -149,7 +149,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
       id: test
-      uses: vmactions/openindiana-vm@60b334e25b7552c956f6346b496e96d36ea7b335
+      uses: vmactions/openindiana-vm@4175f52bbb51ee9c997c46df49d2f47538770268
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -360,7 +360,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'nfs') }}
       id: test
-      uses: vmactions/openindiana-vm@60b334e25b7552c956f6346b496e96d36ea7b335
+      uses: vmactions/openindiana-vm@4175f52bbb51ee9c997c46df49d2f47538770268
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -579,7 +579,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
       id: test
-      uses: vmactions/openindiana-vm@60b334e25b7552c956f6346b496e96d36ea7b335
+      uses: vmactions/openindiana-vm@4175f52bbb51ee9c997c46df49d2f47538770268
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -797,7 +797,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@60b334e25b7552c956f6346b496e96d36ea7b335
+      uses: vmactions/openindiana-vm@4175f52bbb51ee9c997c46df49d2f47538770268
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -1003,7 +1003,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@60b334e25b7552c956f6346b496e96d36ea7b335
+      uses: vmactions/openindiana-vm@4175f52bbb51ee9c997c46df49d2f47538770268
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -1135,7 +1135,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')['x86_64'], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@60b334e25b7552c956f6346b496e96d36ea7b335
+      uses: vmactions/openindiana-vm@4175f52bbb51ee9c997c46df49d2f47538770268
       with:
         mem: 4096
         usesh: true
@@ -1202,7 +1202,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')['x86_64'], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@60b334e25b7552c956f6346b496e96d36ea7b335
+      uses: vmactions/openindiana-vm@4175f52bbb51ee9c997c46df49d2f47538770268
       with:
         mem: 4096
         usesh: true
@@ -1270,7 +1270,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testerr
       continue-on-error: true
-      uses: vmactions/openindiana-vm@60b334e25b7552c956f6346b496e96d36ea7b335
+      uses: vmactions/openindiana-vm@4175f52bbb51ee9c997c46df49d2f47538770268
       with:
         usesh: true
         debug: true
@@ -1298,7 +1298,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testpass
       continue-on-error: true
-      uses: vmactions/openindiana-vm@60b334e25b7552c956f6346b496e96d36ea7b335
+      uses: vmactions/openindiana-vm@4175f52bbb51ee9c997c46df49d2f47538770268
       with:
         usesh: true
         debug: true
