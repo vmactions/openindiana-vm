@@ -137,7 +137,7 @@ jobs:
       DEBUG: 1
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
 #    - name: Creating Web console
 #      if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
 #      uses: vmactions/cf-tunnel@v0
@@ -149,7 +149,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
       id: test
-      uses: vmactions/openindiana-vm@7d0b1d90902c616f7c2c9f08b2c32eade5da9c49
+      uses: vmactions/openindiana-vm@ba079b21e900eb0ccf2f3057eb375f10218056ce
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -356,11 +356,11 @@ jobs:
       DEBUG: 1
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'nfs') }}
       id: test
-      uses: vmactions/openindiana-vm@7d0b1d90902c616f7c2c9f08b2c32eade5da9c49
+      uses: vmactions/openindiana-vm@ba079b21e900eb0ccf2f3057eb375f10218056ce
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -568,7 +568,7 @@ jobs:
       DEBUG: 1
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
 #    - name: Creating Web console
 #      if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
 #      uses: vmactions/cf-tunnel@v0
@@ -579,7 +579,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
       id: test
-      uses: vmactions/openindiana-vm@7d0b1d90902c616f7c2c9f08b2c32eade5da9c49
+      uses: vmactions/openindiana-vm@ba079b21e900eb0ccf2f3057eb375f10218056ce
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -793,11 +793,11 @@ jobs:
       MYTOKEN2: "value2"
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@7d0b1d90902c616f7c2c9f08b2c32eade5da9c49
+      uses: vmactions/openindiana-vm@ba079b21e900eb0ccf2f3057eb375f10218056ce
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -999,11 +999,11 @@ jobs:
       MYTOKEN2: "value2"
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@7d0b1d90902c616f7c2c9f08b2c32eade5da9c49
+      uses: vmactions/openindiana-vm@ba079b21e900eb0ccf2f3057eb375f10218056ce
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -1131,11 +1131,11 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')['x86_64'], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@7d0b1d90902c616f7c2c9f08b2c32eade5da9c49
+      uses: vmactions/openindiana-vm@ba079b21e900eb0ccf2f3057eb375f10218056ce
       with:
         mem: 4096
         usesh: true
@@ -1196,13 +1196,13 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     # The inputs (notably 'prepare' and the sync method) must be byte-identical
     # to the seed job above: the prepared-image cache key hashes them.
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[]}')['x86_64'], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@7d0b1d90902c616f7c2c9f08b2c32eade5da9c49
+      uses: vmactions/openindiana-vm@ba079b21e900eb0ccf2f3057eb375f10218056ce
       with:
         mem: 4096
         usesh: true
@@ -1266,11 +1266,11 @@ jobs:
     runs-on: ubuntu-24.04
     name: test default error OpenIndiana
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - name: Test in OpenIndiana
       id: testerr
       continue-on-error: true
-      uses: vmactions/openindiana-vm@7d0b1d90902c616f7c2c9f08b2c32eade5da9c49
+      uses: vmactions/openindiana-vm@ba079b21e900eb0ccf2f3057eb375f10218056ce
       with:
         usesh: true
         debug: true
@@ -1294,11 +1294,11 @@ jobs:
     runs-on: ubuntu-24.04
     name: test default success OpenIndiana
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - name: Test in OpenIndiana
       id: testpass
       continue-on-error: true
-      uses: vmactions/openindiana-vm@7d0b1d90902c616f7c2c9f08b2c32eade5da9c49
+      uses: vmactions/openindiana-vm@ba079b21e900eb0ccf2f3057eb375f10218056ce
       with:
         usesh: true
         debug: true
