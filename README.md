@@ -38,10 +38,10 @@ All the supported releases are here:
 
 | Release | Comments | x86_64 |
 |---------|---------|---------|
-| 202604-build | build-essential | ✅ (rsync,scp,sshfs,nfs) |
-| 202604 | fresh | ✅ (rsync,scp,sshfs,nfs) |
-| 202510-build | build-essential | ✅ (rsync,scp,sshfs,nfs) |
-| 202510 | fresh | ✅ (rsync,scp,sshfs,nfs) |
+| 202604-build | build-essential | ✅ (rsync,scp,sshfs,nfs,tar) |
+| 202604 | fresh | ✅ (rsync,scp,sshfs,nfs,tar) |
+| 202510-build | build-essential | ✅ (rsync,scp,sshfs,nfs,tar) |
+| 202510 | fresh | ✅ (rsync,scp,sshfs,nfs,tar) |
 
 <!-- extra-column: Comments -->
 <!-- extra-value: 202604 fresh -->
@@ -75,7 +75,6 @@ jobs:
       uses: vmactions/openindiana-vm@v1
       with:
         envs: 'MYTOKEN MYTOKEN2'
-        usesh: true
         prepare: |
           pkg install socat
 
@@ -118,6 +117,8 @@ All the source code tree in the Host machine are mounted into the VM.
 All the `GITHUB_*` as well as `CI=true` env variables are passed into the VM.
 
 So, you will have the same directory and same default env variables when you `run` the CI script.
+
+The `prepare` and `run` scripts are always executed with `sh` in the VM, whatever the default login shell of the VM is.
 
 
 
