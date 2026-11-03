@@ -70,3 +70,39 @@
             arch: loongarch64
           - release: "202604-build"
             arch: armv7
+          - release: "202610"
+            arch: aarch64
+          - release: "202610"
+            arch: riscv64
+          - release: "202610"
+            arch: powerpc64
+          - release: "202610"
+            arch: sparc64
+          - release: "202610"
+            arch: ppc64le
+          - release: "202610"
+            arch: s390x
+          - release: "202610"
+            arch: i386
+          - release: "202610"
+            arch: loongarch64
+          - release: "202610"
+            arch: armv7
+          - release: "202610-build"
+            arch: aarch64
+          - release: "202610-build"
+            arch: riscv64
+          - release: "202610-build"
+            arch: powerpc64
+          - release: "202610-build"
+            arch: sparc64
+          - release: "202610-build"
+            arch: ppc64le
+          - release: "202610-build"
+            arch: s390x
+          - release: "202610-build"
+            arch: i386
+          - release: "202610-build"
+            arch: loongarch64
+          - release: "202610-build"
+            arch: armv7
