@@ -199,7 +199,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs","tar"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[],"armv7":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'sshfs') }}
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -447,7 +447,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs","tar"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[],"armv7":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'nfs') }}
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -758,7 +758,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs","tar"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[],"armv7":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'scp') }}
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         envs: 'DEBUG MYTOKEN MYTOKEN2'
         prepare: |
@@ -894,7 +894,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains('{"x86_64":["rsync","scp","sshfs","nfs","tar"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[],"armv7":[]}', 'tar') }}
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         mem: 4096
         debug: true
@@ -961,7 +961,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains('{"x86_64":["rsync","scp","sshfs","nfs","tar"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[],"armv7":[]}', '9p') }}
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         mem: 4096
         debug: true
@@ -1153,7 +1153,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs","tar"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[],"armv7":[]}')[matrix.arch == '' && 'x86_64' || matrix.arch], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -1256,7 +1256,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs","tar"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[],"armv7":[]}')['x86_64'], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         prepare: |
           pkg install socat
@@ -1360,7 +1360,7 @@ jobs:
         sparse-checkout-cone-mode: true
     - name: Test in OpenIndiana
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         arch: ${{ matrix.arch }}
         debug: true
@@ -1408,7 +1408,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs","tar"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[],"armv7":[]}')['x86_64'], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         envs: 'MYTOKEN MYTOKEN2'
         prepare: |
@@ -1537,7 +1537,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs","tar"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[],"armv7":[]}')['x86_64'], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         mem: 4096
         debug: true
@@ -1603,7 +1603,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs","tar"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[],"armv7":[]}')['x86_64'], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         mem: 4096
         debug: true
@@ -1687,7 +1687,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs","tar"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[],"armv7":[]}')['x86_64'], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         mem: 4096
         debug: true
@@ -1752,7 +1752,7 @@ jobs:
     - name: Test in OpenIndiana
       if: ${{ contains(fromJSON('{"x86_64":["rsync","scp","sshfs","nfs","tar"],"aarch64":[],"riscv64":[],"powerpc64":[],"sparc64":[],"ppc64le":[],"s390x":[],"i386":[],"loongarch64":[],"armv7":[]}')['x86_64'], 'rsync') }}
       id: test
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         mem: 4096
         debug: true
@@ -1830,7 +1830,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testerr
       continue-on-error: true
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         debug: true
         # A command that EXISTS and fails, rather than `false` or a made-up
@@ -1876,7 +1876,7 @@ jobs:
     - name: Test in OpenIndiana
       id: testpass
       continue-on-error: true
-      uses: vmactions/openindiana-vm@7d6df50e68249e8bbda4da93cd9fa3e64244a01d
+      uses: vmactions/openindiana-vm@81e01ad4f3154392849a292d112514d3c91ff9c7
       with:
         debug: true
         # No `true` and no double quotes: this body runs on every guest, and
