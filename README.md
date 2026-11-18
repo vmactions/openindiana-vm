@@ -38,12 +38,12 @@ All the supported releases are here:
 
 | Release | Comments | x86_64 |
 |---------|---------|---------|
-| 202610-build | build-essential | ✅ (rsync,scp,sshfs,nfs,tar) |
 | 202610 | fresh | ✅ (rsync,scp,sshfs,nfs,tar) |
-| 202604-build | build-essential | ✅ (rsync,scp,sshfs,nfs,tar) |
+| 202610-build | build-essential | ✅ (rsync,scp,sshfs,nfs,tar) |
 | 202604 | fresh | ✅ (rsync,scp,sshfs,nfs,tar) |
-| 202510-build | build-essential | ✅ (rsync,scp,sshfs,nfs,tar) |
+| 202604-build | build-essential | ✅ (rsync,scp,sshfs,nfs,tar) |
 | 202510 | fresh | ✅ (rsync,scp,sshfs,nfs,tar) |
+| 202510-build | build-essential | ✅ (rsync,scp,sshfs,nfs,tar) |
 
 <!-- extra-column: Comments -->
 <!-- extra-value: *-build build-essential -->
